@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gileade Vinicius</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Trispace:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style scoped>
+        .v-carousel__controls>.v-item-group {
+            margin-top: 20px !important;
+        }
+        .v-application ol, .v-application ul {
+    padding-left: 0px;
+}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <v-app id="inspire">
+
+            <v-flex id="preLoad" class="containerPreload">
+                <div class="containerDot">
+                    <i class="fas fa-circle dot dot1"></i>
+                    <i class="fas fa-circle dot dot2"></i>
+                    <i class="fas fa-circle dot dot3"></i>
+                </div>
+            </v-flex>
+        
+            <template>
+                  <v-navigation-drawer style="background: transparent; position: fixed;" v-model="drawer" absolute temporary>
+                    <ul class="ulMenu scroll">
+                        <li class="liMenu"><a href="#section0">Inicio</a></li>
+                        <li class="liMenu"><a href="#section1">Sobre</a></li>
+                        <li class="liMenu"><a href="#section2">Projetos</a></li>
+                        <li class="liMenu"><a href="#section3">Tecnologias</a></li>
+                        <li class="liMenu"><a href="#section4">Vamos tomar um café?</a></li>
+                        <li class="liMenu redesMenu">
+                            <a href="https://www.instagram.com/ggilevinicius/" target="_blank"><i class="fab fa-instagram iconRedes"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=5547996226198" target="_blank">
+                                <i class="fab fa-whatsapp iconRedes"></i></a>
+                            <a href="https://github.com/gilevinicius" target="_blank"><i class="fab fa-github iconRedes"></i></a>
+                        </li>
+                    </ul>
+                  </v-navigation-drawer>
+            </template>
+
+        <!-- Btt menu -->
+        <div style="display: inline;" @click='{drawer=!drawer}'><i class="fas fa-bars bttMenu"></i></div>
+
+        <!-- Section 0 -->
+        <section id="section0" :class="{section0:section0}">
+
+            <div class="containerBemVindo">
+                <div class="fotoPerfil"></div>
+
+                <div class="conainerTxtBem">
+                    <span id="text"></span>
+                    <span class="bar">|</span>
+                </div>
+
+                <i class="fas fa-arrow-down center flechaSec0"></i>
+            </div>
+
+        </section>
+
+        <!-- Section 1 -->
+        <section id="section1" :class="{section1:section1}">
+
+            <div class="containerTxtSobre">
+                <p class="txtSobre">
+                    Admiro o universo da tecnologia e sou apaixonado por ele desde a minha infância, por meio dos games e sua constante evolução. Em 2019 eu estava saturado na área em que estava atuando, resolvi migrar para TI, onde comecei a me aprofundar em desenvolvimento web (front-end). Hoje estudo, trabalho e pretendo me aprofundar ainda mais na área. Onde tenho um conhecimento bem fundamentado em HTML, CSS, Javascript, Vue.js, Jquery e PWA.
+                </p>
+            </div>
+
+            <img class="imginicial" src="/images/plataforma.svg" alt="Imagem inicial">
+
+        </section>
+        
+        <!-- Section 3 -->
+        <section id="section2" :class="{section3:section3}">
+            
+            <template>
+                <v-carousel class="carrosell" height="540" cycle hide-delimiter-background interval="8000">
+                
+                <v-row justify="center">
+                    <v-carousel-item class="carrosel-item">
+                        <a class="aImg" target="blank" href="https://bikcraft.com/"><img class="imgCarro" src="/images/bikcraft.png" alt=""></a>
+                    </v-carousel-item>
+                </v-row>
+                
+                <v-row justify="center">
+                    <v-carousel-item class="carrosel-item">
+                        <a class="aImg" target="blank" href="https://www.origamid.com/projetos/brafe-2/"><img class="imgCarro" src="/images/brafe.png" alt=""></a>
+                    </v-carousel-item>
+                </v-row>
+                
+                <v-row justify="center">
+                    <v-carousel-item class="carrosel-item">
+                        <a class="aImg" target="blank" href="https://handel.origamid.dev/"><img class="imgCarro" src="/images/handel.png" alt=""></a>
+                    </v-carousel-item>
+                </v-row>
+                
+                <v-row justify="center">
+                    <v-carousel-item class="carrosel-item">
+                        <a class="aImg" target="blank" href="https://www.origamid.com/projetos/lescone/"><img class="imgCarro" src="/images/le.png" alt=""></a>
+                    </v-carousel-item>
+                </v-row>
+                
+                <v-row justify="center">
+                    <v-carousel-item class="carrosel-item">
+                        <a class="aImg" target="blank" href="https://www.origamid.com/projetos/wildbeast/"><img class="imgCarro" src="/images/lobo.png" alt=""></a>
+                    </v-carousel-item>
+                </v-row>
+                
+            </v-carousel>
+        </template>
+        
+        
+        </section>
+    
+        <!-- Section 2 -->
+        <section id="section3" :class="{section2:section2}">
+            <div class="containerTecs">
+
+                <div class="cardTecs" @click="dialog1=!dialog1">
+                    <i class="fab fa-html5 iconTecs"></i>
+                    <p class="txtTecs">
+                        HTML
+                    </p>
+                </div>
+                
+                <div class="cardTecs" @click="dialog2=!dialog2">
+                    <i class="fab fa-css3-alt iconTecs"></i>
+                    <p class="txtTecs">
+                        CSS
+                    </p>
+                </div>
+
+                <div class="cardTecs" @click="dialog3=!dialog3">
+                    <i class="fab fa-js-square iconTecs"></i>
+                    <p class="txtTecs">
+                        JAVASCRIPT
+                    </p>
+                </div>
+                
+                <div class="cardTecs" @click="dialog4=!dialog4">
+                    <i class="fab fa-vuejs iconTecs"></i>
+                    <p class="txtTecs">
+                        VUE.JS
+                    </p>
+                </div>
+                
+                <div class="cardTecs" @click="dialog5=!dialog5">
+                    <i class="fas fa-mobile-alt iconTecs"></i>
+                    <p class="txtTecs">
+                        PWA
+                    </p>
+                </div>
+                
+                <div class="cardTecs" @click="dialog6=!dialog6">
+                    <i class="fab fa-php iconTecs"></i>
+                    <p class="txtTecs">
+                        PHP
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="section4" :class="{section4:section4}">
+
+            <div class="containercafe">
+                <h3 class="txtcafe">Vamos tomar um café?</h3>
+                
+                <a href="https://api.whatsapp.com/send?phone=5547996226198">
+                    <div class="bttcafe">
+                        <i class="fas fa-mug-hot iconCafe"></i>
+                    </div>
+                </a>
+                    
+            
+            </div>
+
+        </section>
+        
+        <div class="c">
+            <v-row justify="center">
+                <v-dialog v-model="dialog1" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        HTML é a sigla para Hyper Text Markup Language, ou seja, linguagem de marcação de hipertexto. Ela é utilizada como marcação para desenvolver páginas e documentos eletrônicos para a internet.
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog1=!dialog1">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+            
+            <v-row justify="center">
+                <v-dialog v-model="dialog2" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        O Cascading Style Sheets (CSS) é uma "folha de estilo" composta por “camadas” e utilizada para definir a apresentação (aparência) em páginas da internet que adotam para o seu desenvolvimento linguagens de marcação (como XML, HTML e XHTML).
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog2=!dialog2">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+            
+            <v-row justify="center">
+                <v-dialog v-model="dialog3" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        JavaScript é uma linguagem de programação criada em 1995 por Brendan Eich enquanto trabalhava na Netscape Communications Corporation. O JavaScript fornece às páginas web a possibilidade de programação, transformação e processamento de dados enviados e recebidos, interagindo com a marcação e exibição de conteúdo da linguagem HTML e com a estilização desse conteúdo proporcionada pelo CSS nessas páginas.
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog3=!dialog3">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+            
+            <v-row justify="center">
+                <v-dialog v-model="dialog4" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        Vue é um framework progressivo para a construção de interfaces de usuário. Vue foi projetado desde sua concepção para ser adotável incrementalmente. A biblioteca principal é focada exclusivamente na camada visual (view layer), sendo fácil adotar e integrar com outras bibliotecas ou projetos existentes.
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog4=!dialog4">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+            
+            <v-row justify="center">
+                <v-dialog v-model="dialog5" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        PWA é uma aplicação híbrida entre web e mobile. Imagine que ao acessar um site que você goste muito pelo smartphone você receba um aviso para adicionar o site à sua homepage de aplicativos.
+                        Com o app instalado agora em seu celular, você pode ter a mesma experiência que tinha pelo browser agora sem nenhuma informação em tela além da aplicação, ou seja, toda interface do navegador como barra de endereço, botões, favoritos, etc, são removidos.
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog5=!dialog5">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+            
+            <v-row justify="center">
+                <v-dialog v-model="dialog6" persistent max-width="290">
+                <v-card style="padding:10px">
+                    <p style="margin:10px">
+                        PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web.
+                    </p>
+                    <v-btn color="green darken-1" text @click="dialog6=!dialog6">
+                        Entendi!
+                    </v-btn>
+                </v-card>
+                </v-dialog>
+            </v-row>
+        </div>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
